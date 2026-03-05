@@ -1,161 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FLINS-ISKE 2026 Special Session · Trustworthy Machine Learning in the Wild</title>
-  <meta name="description" content="FLINS-ISKE 2026 Special Session on Trustworthy Machine Learning in the Wild — overview, CFP, dates, topics, organizers, and contact." />
-  <style>
-    :root{
-      --bg:#0f172a; /* slate-900 */
-      --card:#0b1226; /* slightly lighter */
-      --text:#e5e7eb; /* gray-200 */
-      --muted:#94a3b8; /* slate-400 */
-      --accent:#38bdf8; /* sky-400 */
-      --accent2:#22d3ee; /* cyan-400 */
-      --ring:rgba(56,189,248,.35);
-      --maxw:1100px;
-    }
-    html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; background:linear-gradient(180deg,var(--bg),#0b1020 60%, var(--bg)); color:var(--text)}
-    a{color:var(--accent)}
-    header{position:sticky;top:0;background:rgba(2,6,23,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(148,163,184,.15);z-index:50}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-    .nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{font-weight:700;letter-spacing:.2px}
-    .links{display:flex;gap:14px;flex-wrap:wrap}
-    .links a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px}
-    .links a:hover{background:rgba(148,163,184,.1)}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    .hero{padding:72px 0 36px;border-bottom:1px solid rgba(148,163,184,.15)}
-    .kicker{color:var(--accent2);text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:.8rem}
-    h1{font-size:clamp(2rem,3.2vw,3rem);line-height:1.15;margin:.4rem 0 1rem}
-    .subtitle{font-size:1.1rem;color:var(--muted);max-width:900px}
+  <title>TrustVLM</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    main section{padding:44px 0;border-bottom:1px solid rgba(148,163,184,.12)}
-    h2{font-size:1.6rem;margin:0 0 14px}
-    h3{font-size:1.1rem;margin:22px 0 8px;color:var(--accent2)}
-    .grid{display:grid;gap:16px}
-    @media(min-width:900px){ .grid-2{grid-template-columns:1fr 1fr} }
-    .card{background:linear-gradient(180deg,rgba(15,23,42,.6),rgba(11,18,38,.6));border:1px solid rgba(148,163,184,.14);border-radius:14px;padding:18px}
-    ul{padding-left:1.2rem}
-    .note{font-size:.95rem;color:var(--muted)}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid rgba(56,189,248,.6);text-decoration:none;color:var(--text)}
-    .btn:hover{box-shadow:0 0 0 4px var(--ring)}
-    .footer{padding:32px 0;color:var(--muted)}
-    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:rgba(148,163,184,.08);border:1px solid rgba(148,163,184,.2);border-radius:6px;padding:0 .35rem}
-    .pill{display:inline-block;padding:4px 8px;border-radius:999px;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.4);color:#cffafe;font-size:.8rem;margin-right:6px}
-  </style>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: TheEvent
+  * Updated: Mar 09 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">FLINS-ISKE TML 20026</div>
-      <nav class="links" aria-label="Primary">
-        <a href="#overview">Overview</a>
-        <a href="#dates">Dates</a>
-        <a href="#cfp">Guideline</a>
-        <a href="#topics">Topics</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#organizers">Organizers</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <div class="wrap hero">
-    <div class="kicker" style="font-size: 18px;">FLINS-ISKE 2026 Special Session on </div>
-    <h1 align="center">Trustworthy Machine Learning in the Wild:</h1>
-    <h1 align="center">Theory, Algorithm and Application</h1>
-    <h4 align="center">
-    July 15-19, 2026, Sydney, Australia
-</h4>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid container-xxl d-flex align-items-center">
 
-  <main class="wrap">
-    <!-- Overview -->
-    <section id="overview">
-      <h2>Overview</h2>
-        <div class="card">
-          <p>Deployed machine learning (ML) systems increasingly operate under dataset shift, partial observability, distributional drift, and adversarial pressure. In safety- and mission-critical contexts (healthcare, finance, autonomy, climate risk, scientific discovery), these systems must be reliable, robust, fair, private, and accountable—not just accurate on static benchmarks. Despite rapid advances, real-world deployments still face:
-        <ul>
-          <li>Sensitiveness to out-of-distribution (OOD) inputs</li>
-          <li>Miscalibrated model uncertainty</li>
-          <li>Vulnerability to adversarial attack</li>
-          <li>Ethical and fairness bias</li>
-        </ul>
-      </p>    
-<p>
-This session brings together advances in theory (e.g., distributionally robust optimization, uncertainty quantification, calibration, guarantees under shift), algorithms (OOD detection, OOD generalization and robust learning), and applications (e.g., healthcare and autonomous systems) to connect principled risk bounds with scalable methods and field results, spotlighting evaluation protocols that reflect operational realities.
-</p>
-<p>
-All accepted papers will be published as a proceeding by Springer Lecture Notes in Computer Science (LNCS), <strong>both EI and Scopus-indexed</strong>. Selected papers will be invited for publication in SCI-indexed journals following a rigorous peer-review process.
-</p>
-
-      <p>
-      Please submit through the <a
-      href="https://openreview.net/group?id=flins.cc/FLINS-ISKE/2026/Conference">online submission system</a> (active since December 22, 2025). Submissions must conform to
-      the submission guidelines available on
-      <a
-      href="https://2026.flins.cc/submissions.html">the FLINS-ISKE 2026
-      website</a>.
-      </p>
-        </div>
-    </section>
-
-    <!-- Dates -->
-    <section id="dates">
-      <h2>Important Dates (23:59, Anywhere on Earth,  i.e. UTC-12)</h2>
-      <div class="card">
-        <ul>
-          <li><strong>Paper submission deadline:</strong> January 15, 2026</li>
-          <li><strong>Author notification:</strong> March 1, 2026</li>
-          <li><strong>Camera‑ready due:</strong> March 15, 2026</li>
-          <li><strong>Session date:</strong> July 15-19, 2026</li>
-        </ul>
+      <div id="logo" class="me-auto">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
+        <!-- <a href="index.html" class="scrollto"><h1><span>AI</span>4DT&CP</h1></a> -->
+        <a href="index.html" class="scrollto"><h1>TrustVLM</h1></a>
       </div>
-    </section>
 
-
-    <!-- Topics -->
-    <section id="topics">
-      <h2>Topics of Interest (include but are not limited to)</h2>
-        <div class="card">
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#aboutsec">Call for papers</a></li>
+          <li><a class="nav-link scrollto" href="#topics">Topics</a></li>
+	  <li><a class="nav-link scrollto" href="#program">Program</a></li>
+          
+          
+		  <li><a class="nav-link scrollto" href="#impdates">Important dates</a></li>
+          <li><a class="nav-link scrollto" href="#submission">Submission</a></li>
+		  <li><a class="nav-link scrollto" href="#organization">Organization</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><strong>Distribution shift:</strong> OOD detection, OOD generalization, Test-time adaptation</li>
-            <li><strong>Uncertainty estimation and calibration:</strong> Bayesian deep learning and conformal prediction</li>
-            <li><strong>Adversarial learning:</strong> robustness to adversarial manipulation of models and data</li>
-            <li><strong>Ethic and fairness:</strong> fairness definition and assessment, bias identification and mitigation</li>
-            <li><strong>Autonomous trustworthy machine learning:</strong> hyperparameter optimization, neural architecture search</li>
-            <li><strong>Trustworthy foundation models:</strong> jailbreak/prompt‑injection defenses; data poisoning/backdoors; hallucination mitigation</li>
-            <li><strong>Evaluation:</strong> datasets, platforms, and measures for trustworthiness under real‑world shift</li>
-            <li><strong>Applications:</strong> computer vision,  natural language processing, biology, physics, chemistry</li>
+            <li><a href="#">Drop Down 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="#">Deep Drop Down 1</a></li>
+                <li><a href="#">Deep Drop Down 2</a></li>
+                <li><a href="#">Deep Drop Down 3</a></li>
+                <li><a href="#">Deep Drop Down 4</a></li>
+                <li><a href="#">Deep Drop Down 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Drop Down 2</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+            <li><a href="#">Drop Down 4</a></li>
           </ul>
+        </li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      
+	  <!-- <h1 class="mb-4 pb-0"><br><span>AI</span>4DT&CP</h1> -->
+    <h1 class="mb-4 pb-0">TrustVLM</h1>
+	  <!-- <h3 class="mb-4 pb-0">The first Workshop on<br><span> AI</span> for Digital Twins and Cyber-physical applications</h3> -->
+    <h3 class="mb-4 pb-0">Toward Trustworthy Vision-language Models in the Wild: <br> Theory, Algorithm and Application</h3> 
+	  <br>
+	  <p class="mb-4 pb-0">In conjunction with <a href="https://icmr2026.org/index.html">ICMR 2026</a><br> 16th ACM International Conference on Multimedia Retrieval</p>
+      <p class="mb-4 pb-0">June 16-19, 2026, Amsterdam, The Netherlands</p>
+     
+      <a href="#topics" class="about-btn scrollto">Topics of Interest</a>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= ABOUT ======= -->
+    <section id="speakers-details">
+	<div id="aboutsec">
+	<br>
+      <div class="container">
+        <div class="section-header">
+          <h2>Call for papers </h2>
+          
         </div>
+
+        <div class="row">
+          
+
+          <div class="col-md-12">
+            <div class="details">
+              <h2>TrustVLM</h2>
+              <br>
+              <h5>Vision-Language Models (VLMs), such as CLIP, LLaVA, and GPT-4V, have revolutionized multimedia applications, such as captioning, visual question answering, cross-modal retrieval, and multi-modal agents, by enabling open-vocabulary search and generation. At the same time, the community is encountering a growing gap between benchmark performance and deployment reliability in real-world, open-domain settings—what this workshop calls “in the wild.”</h5>
+			  <!-- <h5>The idea gained traction among both academic institutions and industry players, revitalising the <b>Digital Twin</b> technology that enables the creation of virtual replicas of physical objects by mirroring their properties, data and behaviors and enabling new intelligent and augmented functionalities such as modelling, simulation, and cognitive capabilities.
+
+<h5>We believe that Artificial Intelligence (AI) will transform the field of Digital Twin technology by enabling the creation of intelligent virtual replicas that may offer smart services and lead to adaptive AI in <b>cyber-physical</b> environments.</h5>
+<h5> Overall, AI can be used to enhance the performance, safety, and security of Digital Twin and cyber-physical systems by making them more intelligent, adaptive, and autonomous. The results can be better control, optimisation, and prediction of the Cyber-Physical systems.
+Digital Twin and cyber-physical systems can be enhanced with AI in several ways since AI enables real-time monitoring and control of physical systems with the possibility of delivering intelligent services with applications in several domains, such as: </h5>
+			<ul>
+			<li><h5><b>Predictive modelling</b>: AI-powered digital twins can predict the behaviour of physical systems under different conditions, helping to identify potential issues or inefficiencies in the physical system before they occur.</h5></li>
+			<li><h5><b>Anomaly detection</b>: AI-powered digital twins can analyse sensor data from the physical system in real-time, using machine learning techniques to identify anomalies or deviations from normal behaviour.</h5></li>
+			<li><h5><b>Digital Human Replica</b>: Building virtual replicas of humans that reproduce and model both outer and inner aspects of a human being, such as physical and physiological characteristics, personality, sensitivities, thoughts and skills.</h5></li>
+			<li><h5><b>Optimisation</b>: AI-powered digital twins can analyse sensor data and other inputs to optimise the performance of the physical system (e.g., by adjusting the control parameters to minimise energy consumption or maximise production efficiency).</h5></li>
+			<li><h5><b>Autonomous control</b>: AI-powered digital twins can be used to control a physical system autonomously, using sensor data and other inputs to make real-time decisions.</h5></li>
+			<li><h5><b>Safety and security</b>: AI-powered digital twins can be used to monitor and analyse sensor data to detect security threats or unsafe conditions in the physical system and to trigger appropriate responses.</h5></li>
+			<li><h5><b>Big Data Applications</b>: Big data frameworks can be leveraged to make sense of huge data collections and provide the digital twins with further features, analysis, graphs.</h5></li>
+			</ul>
+			<h5>At the same time, incorporating machine learning models into digital twin systems can be critical when monitoring or controlling critical systems. </p>
+			<h5><b>Machine Learning Operations (MLOps)</b> approaches are attracting increasing interest to ensure that intelligent models are deployed robustly and reliably, especially when exploiting <b>Continual Learning</b> or <b>Reinforcement Learning</b> techniques.</h5>
+
+			<h5>The workshop aims to bring together experts in the fields of Artificial Intelligence, Digital Twin technology, and Cyber-Physical systems to explore the latest developments and best practices in the use of AI-based digital twins for a wide range of cyber-physical services and applications.</h5> -->
+
+             </div>
+          </div>
+
+        </div>
+      </div>
+	</div>
+    </section>
+    
+<!-- ======= 	topics ======= -->
+    <section id="speakers-details">
+	<div id="topics">
+	<br>
+      <div class="container">
+        <div class="section-header">
+          <h2>Topics of interest </h2>
+          
+        </div>
+
+        <div class="row">
+          
+
+          <div class="col-md-12">
+            <div class="details">
+             
+              <h5>We welcome all papers that are related but not limited to the following topics:</h5>
+			 		<ul>
+			<li><h5><b>Investigation into the reinforcement between LLM and clustering, e.g., low-rank adaptation of LLM by clustering and enhancing clustering stability using LLM</b></h5></li>
+			<li><h5><b>Novel approaches integrating LLM into classical/deep clustering methods</b></h5></li>
+			<li><h5><b>Interpretability of the clustering process leveraging LLM</b></h5></li>
+			<li><h5><b>Efficient clustering models for handling large-scale data</b></h5></li>
+			<li><h5><b>LLM-guided incremental clustering for dynamic data</b></h5></li>
+			<li><h5><b>Generalizable LLM-based clustering models for cross-domain data</b></h5></li>
+			<li><h5><b>Employing multi-modal LLM for multi-view/modal clustering</b></h5></li>
+			<li><h5><b>Leveraging LLM to supply external knowledge for few-shot clustering</b></h5></li>
+			<li><h5><b>Enabling LLM to understand topological information for graph clustering</b></h5></li>
+			<li><h5><b>Utilizing LLM to guide clustering with unknown parameters such as the subspace number and the cluster number</b></h5></li>
+			<li><h5><b>LLM-driven chain-of-thought prompting for advanced clustering and complex problem solving</b></h5></li>
+			<li><h5><b>Establishing new benchmarks and evaluations for clustering assessment</b></h5></li>
+			</ul>
+		<h5>And clustering application papers that are focused on but not limited to the following domains:<h5>
+			<ul>
+				<li><h5><b>Recommender systems</b></h5></li>
+				<li><h5><b>Information retrieval</b></h5></li>
+				<li><h5><b>Computer vision</b></h5></li>
+				<li><h5><b>Natural language processing</b></h5></li>
+				<li><h5><b>Social network analysis</b></h5></li>
+				<li><h5><b>Anomaly detection</b></h5></li>
+				<li><h5><b>Automatic speech recognition</b></h5></li>
+				<li><h5><b>Transportation networks</b></h5></li>
+				<li><h5><b>Artificial intelligence for science/engineering</b></h5></li>
+				<li><h5><b>Financial technology</b></h5></li>
+			<ul>
+			
+             </div>
+          </div>
+
+        </div>
+      </div>
+	</div>
+    </section>
+<!-- ======= Schedule Section ======= -->
+<section id="program">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Program</h2>
+      <p>The workshop will be held on November 12th during ICDM 2025 in the Massachusetts Room, The Capital Hilton Hotel.</p>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Event</th>
+            <th scope="col">Presenter(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">13:30-13:35</td>
+            <td class="align-middle">Opening Remark</td>
+            <td class="align-middle">Wei Ye</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">13:35-14:30</td>
+            <td class="align-middle">Keynote Speech: Low Resource Textual Anomaly Detection with Large Language Models</td>
+            <td class="align-middle">Ming Liu</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">14:30-14:45</td>
+            <td class="align-middle">Text Clustering with Large Language Models: Recent Advances, Applications, and Experimental Insights</td>
+            <td class="align-middle">Kamal Taha</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">14:45-15:00</td>
+            <td class="align-middle">LLM-Enhanced Semantic Clustering for Predictive Industrial Incident Detection: A Zero-Shot Approach to Safety Analytics</td>
+            <td class="align-middle">Magzhan Kairanbay, Basaveswar Reddy Mora Reddy, Sayed Ahmed Khalaf, Ali Alshehab, and Ahmed Bahar</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">15:00-15:15</td>
+            <td class="align-middle">New Topic Discovery Using LLM Analysis and Entropy Based Clustering of Short Texts</td>
+            <td class="align-middle">Allen Detmer, Raj Bhatnagar, and Jillian Aurisano</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">15:15-15:30</td>
+            <td colspan="2" class="text-center align-middle">Break</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">15:30-15:45</td>
+            <td class="align-middle">Orthogonal Semi-Nonnegative Tensor Factorization based Tensorized Label Learning</td>
+            <td class="align-middle">Yuxuan Liu, Quanxue Gao, Jingjing Xue, Jing Li, and Cheng Deng</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">15:45-16:00</td>
+            <td class="align-middle">Anchor Label Guided Co-Clustering via Multi-Anchor Graphs Fusion</td>
+            <td class="align-middle">Guangyu Yang, Xuhong Dong, Rui Wang, Quanxue Gao, and Yu Duan</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">16:00-16:30</td>
+            <td colspan="2" class="text-center align-middle">Coffee Break</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">16:30-17:15</td>
+            <td class="align-middle">Keynote Speech: Some Challenges in Clustering Analysis</td>
+            <td class="align-middle">Jicong Fan</td>
+          </tr>
+          <tr>
+            <td class="align-middle" style="white-space: nowrap;">17:15-17:30</td>
+            <td class="align-middle">Compute-Efficient Prediction of Rhetorical Relations via Late Fusion of Semantic Perturbation and Attention Features</td>
+            <td class="align-middle">Yoga Harshitha Duddukuri</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section><!-- End Schedule Section -->
+				
+<!-- ======= 	Important dates ======= -->
+    <section id="speakers-details">
+	<div id="impdates">
+	<br>
+      <div class="container">
+        <div class="section-header">
+          <h2>Important dates </h2>
+          
+        </div>
+		<h5> <b>Submission deadline</b>: <s>Aug 29, 2025</s> <span style="color: red;">Sep 05, 2025</span> </h5>
+        <h5> <b>Paper notification</b>: <s>Sep 15, 2025</s> <span style="color: red;">Sep 19, 2025</span> </h5>
+		<h5> <b>Early Bird Registration deadline</b>: <s>Sep 24, 2025</s> <span style="color: red;">Sep 30, 2025</span> </h5>
+		<h5> <b>Camera-ready</b>: <s>Sep 25, 2025</s> <span style="color: red;">Oct 5, 2025</span>. The camera ready submission guide is <a href="https://www3.cs.stonybrook.edu/~icdm2025/authorinstruction-workshops.html" target="_blank">here</a>.
+		<h5> <b>Workshop</b>: Tentatively on Nov 12, 2025 (the first day)  </h5> </h5>  
+      </div>
+	</div>
     </section>
 
-    <!-- Organizers -->
-    <section id="organizers">
+<!-- ======= 	Submission ======= -->
+    <section id="speakers-details">
+	<div id="submission">
+	<br>
+      <div class="container">
+        <div class="section-header">
+          <h2>Submission </h2>
+          
+        </div>
+		<!-- <h5> Papers can be submitted as PDF follow the IEEE 2-column format: </h5> 
+		<a href="https://easychair.org/my/conference?conf=ai4dtcp0"> https://easychair.org/my/conference?conf=ai4dtcp </a>
+        <br> -->
+		<br> 
+		<h5>All the accepted papers can be up to 10 pages including references in the <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank">IEEE 2-column format</a>. Submissions longer than 10 pages will be rejected without review. All submissions will be triple-blind reviewed by the Program Committee based on technical quality, relevance to the scope of the conference, originality, significance, and clarity. Manuscripts must be submitted electronically through the online submission system: <a href="https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S08&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php" target="_blank">Submit your paper here</a>. Accepted papers will be included in the ICDM Workshop Proceedings (separate from ICDM Main Conference Proceedings), and each workshop paper requires a full registration. Meanwhile, duplicate submissions of the same paper to more than one ICDM workshop are forbidden.<h5>
+    <br> 
+	<br> 
+    </section>
+
+<!-- ======= Organization Section ======= -->
+<style>
+  .organizer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .organizer {
+    text-align: center;
+    width: 280px;
+  }
+  .organizer img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .organizer p {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  .organizer p strong,
+  .organizer p span {
+    display: block;
+    text-align: center;
+    white-space: normal;
+  }
+</style>
+
+<section id="speakers">
+  <div id="organization">
+    <br>
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Organization</h2>
+      </div>
       <h2>Organizing Committee</h2>
-      <div class="card">
-        <ul>
-          <li><strong><a href="https://profiles.uts.edu.au/student_Bo.Peng-7">Bo Peng</a>
-</strong> (University of Technology Sydney) — <a href="mailto:bopeng.ml@gmail.com">bopeng.ml@gmail.com</a></li>
-          <li><strong><a href="https://d12306.github.io/">Sean Du</a></strong> (Nanyang Technological University) — <a href="mailto:xuefeng.du@ntu.edu.sg">xuefeng.du@ntu.edu.sg</a></li>
-          <li><strong><a href="https://fang-zhen.github.io/index.html">Zhen Fang</a></strong> (University of Technology Sydney) — <a href="mailto:zhen.fang@uts.edu.au">zhen.fang@uts.edu.au</a></li>
-          <li><strong><a href="https://pages.cs.wisc.edu/~sharonli/">Sharon Yixuan Li</a></strong> (University of Wisconsin–Madison) — <a href="mailto:sharonli@cs.wisc.edu">sharonli@cs.wisc.edu</a></li>
-          <li><strong><a href="https://profiles.uts.edu.au/Ling.Chen">Ling Chen</a></strong> (University of Technology Sydney) — <a href="mailto:Ling.Chen@uts.edu.au">Ling.Chen@uts.edu.au</a></li>
+      <br>
+	  <h3><span style="color: blue;">Program Co-Chairs</span></h3>
+      <div class="row">
+        <div class="organizer-grid">
+          <div class="organizer">
+            <img src="assets/img/speakers/1.jpg" alt="Wei Ye">
+            <p>
+              <strong>Wei Ye, PhD</strong>
+              <span>Tenure-Track Professor</span>
+              <span>Tongji University, Shanghai Innovation Institute, China</span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/2.jpg" alt="Ye Zhu">
+            <p>
+              <strong>Ye Zhu, PhD</strong>
+              <span>Senior Lecturer</span>
+              <span>Deakin University, Australia</span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/3.jpg" alt="Sourav Medya">
+            <p>
+              <strong>Sourav Medya, PhD</strong>
+              <span>Assistant Professor</span>
+              <span>University of Illinois at Chicago, USA</span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/4.jpg" alt="Xin Sun">
+            <p>
+              <strong>Xin Sun, PhD</strong>
+              <span>Professor</span>
+              <span>City University of Macau, China</span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/5.jpg" alt="Benjamin Roth">
+            <p>
+              <strong>Benjamin Roth, PhD</strong>
+              <span>Professor</span>
+              <span>University of Vienna, Austria</span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/6.jpg" alt="Christian Böhm">
+            <p>
+              <strong>Christian Böhm, PhD</strong>
+              <span>Professor</span>
+              <span>University of Vienna, Austria</span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/7.jpg" alt="Claudia Plant">
+            <p>
+              <strong>Claudia Plant, PhD</strong>
+              <span>Professor</span>
+              <span>University of Vienna, Austria</span>
+            </p>
+          </div>
+        </div>
+		<h3><span style="color: blue;">Publicity Co-Chairs</span></h3>
+		<div class="row">
+        <div class="organizer-grid">
+		  <div class="organizer">
+            <img src="assets/img/speakers/10.jpg" alt="Wengang Guo">
+            <p>
+              <strong>Wengang Guo</strong>
+              <span>PhD Candidate</span>
+              <span>Tongji University, China</span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/8.jpg" alt="Chunchun Chen">
+            <p>
+              <strong>Chunchun Chen</strong>
+              <span>PhD Candidate</span>
+              <span>Tongji University, China </span>
+            </p>
+          </div>
+          <div class="organizer">
+            <img src="assets/img/speakers/9.jpg" alt="Xing Wei">
+            <p>
+              <strong>Xing Wei</strong>
+              <span>PhD Candidate</span>
+              <span>Tongji University, China</span>
+            </p>
+          </div>
+        </div>
+		<h2>Program Committee Members</h2>
+        <br>
+			  <ul>
+        <li><h5>Carolina Atria - University of Vienna, Austria </h5></li>
+  	<li><h5>Linchuan Zhang - Tongji University, China </h5></li>
+        <li><h5>Zhaokai Sun - Tongji University, China </h5></li>
+  	<li><h5>Maozheng Li - Tongji University, China </h5></li>
+	<li><h5>Yue Niu - Tongji University, China </h5></li>
+  	<li><h5>Andrii Shkabrii - University of Vienna, Austria </h5></li>
+        <li><h5>Jiayi Yang - Tongji University, China </h5></li>
+        <li><h5>Chenrun Wang - Tongji University, China</h5></li>
+        <li><h5>Chenyi Xiong - Tongji University, China </h5></li>
+        <li><h5>Yang Liu - Shanghai Innovation Institute, China </h5></li>
+  	<li><h5>Jinyang Wu - Shanghai Innovation Institute, China </h5></li>
         </ul>
       </div>
-
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>For general inquiries, email <a href="mailto:bopeng.ml@gmail.com">bopeng.ml@gmail.com</a> with subject line <span class="kbd">[FLINS-ISKE 2026 TML Special Session]</span>.</p>
+	</div>
+    </section><!-- End Speakers Section -->
+<!-- ======= Keynote Speaker Section ======= -->
+<section id="keynote-speaker">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Keynote Speakers</h2>
+    </div>
+    
+    <div class="row">
+      <div class="organizer-grid">
+        <div class="organizer">
+          <img src="assets/img/speakers/ming_liu.jpg" alt="Ming Liu">
+          <p>
+            <strong>Ming Liu, PhD</strong>
+            <span>Senior Lecturer</span>
+            <span>Deakin University, Australia</span>
+          </p>
+        </div>
       </div>
-    </section>
-  </main>
-  </footer>
+      
+      <div class="col-lg-12">
+        <h3>Title: Low Resource Textual Anomaly Detection with Large Language Models</h3>
+        <h4>Abstract:</h4>
+        <p>Two-step approaches combining pre-trained large language model embeddings and anomaly detectors demonstrate strong performance in text anomaly detection by leveraging rich semantic representations. However, high-dimensional dense embeddings extracted by large language models pose challenges due to substantial memory requirements and high computation time. In this talk, I will first show our intensive empirical results for text anomaly detection with the two stage approach, and then talk about the combined approach with learned VAE and LLM embeddings. At last I will introduce our more recent Simplified Isolation Kernel (SIK), which maps high-dimensional dense embeddings to lower-dimensional sparse representations while preserving crucial anomaly characteristics. SIK has linear time complexity and significantly reduces space complexity through its innovative boundary-focused feature mapping. Experiments across 7 datasets demonstrate that SIK achieves better detection performance than 11 state-of-the-art (SOTA) anomaly detection algorithms while maintaining computational efficiency and low memory cost.</p>
+        
+        <h4>Bio:</h4>
+        <p>Dr Ming Liu is a senior lecturer in Deakin University, Australia. He works on Natural Langauge Processing and Machine Learning. He proposed the "Learn to actively learn" approach for active learning and developed a few efficient text summarization models/pipelines (e.g. SummPip, SciSummPip, GLIMMER), most of which are widely used in low-resource text generation settings. Dr Ming has strong interest in solving real world text mining problems, paticularly in domain specific settings. Dr Ming is the area chair in ACL Rolling Reveiw and the session chair in EMNLP2025.</p>
+      </div>
+    </div>    
+	  <div class="row">
+      <div class="organizer-grid">
+        <div class="organizer">
+          <img src="assets/img/speakers/Jicong_Fan.jpg" alt="Jicong Fan">
+          <p>
+            <strong>Jicong Fan, PhD</strong>
+            <span>Assistant Professor</span>
+            <span>School of Data Science, The Chinese University of Hong Kong, Shenzhen</span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-12">
+        <h3>Title: Some Challenges in Clustering Analysis</h3>
+        <h4>Abstract:</h4>
+        <p>Despite the proliferation of hundreds of clustering algorithms over the past decades, significant and persistent challenges continue to complicate their application in real-world scenarios. This talk discuses these challenges, focusing on: 1) model selection and hyperparameter tuning; 2) clustering non-Euclidean data such as graphs; 3) clustering mixed-type and multi-model data; 4) clustering on extremely large-scale datasets. The talk also introduces some possible solutions to these challenges and shows some numerical comparison of different clustering algorithms across hundreds of datasets.</p>
+        
+        <h4>Bio:</h4>
+        <p>Jicong Fan is an Assistant Professor at the School of Data Science, The Chinese University of Hong Kong, Shenzhen. Professor Fan previously obtained his Ph.D. from the Department of Electronic Engineering, City University of Hong Kong in 2018, and his Master’s degree in Control Science and Engineering and Bachelor’s degree in Automation from Beijing University of Chemical Technology in 2013 and 2010 respectively. Prior to joining CUHK-Shenzhen, he was a postdoc associate at Cornell University. He held research positions at The University of Wisconsin-Madison and The University of Hong Kong in 2018 and 2015 respectively. Professor Fan's research interests are Artificial Intelligence and Machine Learning. Particularly, he has done a lot of work on matrix/tensor methods, clustering algorithms, anomaly/outlier/fault detection, graph learning, and automated machine learning. His research has been published on prestigious journals and conferences such as IEEE TSP/TNNLS/TII, KDD, NeurIPS, CVPR, ICML, ICLR, AAAI, and IJCAI. He is a senior member of IEEE, is serving as an associate editor for two international journals including Pattern Recognition and Neural Processing Letters, and is an area chair of NeurIPS and ICML. He won the first prize of the Natural Science Award of Chinese Association of Automation in 2023.</p>
+      </div>
+    </div>
+  </div>
+</section><!-- End Keynote Speaker Section -->
+<!-- ======= Speakers Section ======= -->
+    <section id="speakers">
+	<div id="contact">
+	<br>
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Contact for information</h2>
+          
+        </div>
+        <h5>If you have any questions regarding the workshop, feel free to reach out to us:<h5>
+		<h5><b>E-mail: </b>yew@tongji.edu.cn, c2chen@tongji.edu.cn</h5>
+              <br>
+        
+      </div>
+	</div>
+</section><!-- End Speakers Section -->
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
